@@ -1,0 +1,35 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@petcareorg/data": ["libs/data/src/index.ts"],
+      "@petcareorg/ui": ["libs/ui/src/index.ts"],
+      "@petcareorg/petcareadmin/data": ["libs/petcareadmin/data/src/index.ts"],
+      "@petcareorg/petcareadmin/feature-main": [
+        "libs/petcareadmin/feature-main/src/index.ts"
+      ],
+      "@petcareorg/petcareadmin/feature-login": [
+        "libs/petcareadmin/feature-login/src/index.ts"
+      ],
+      "@petcareorg/petcareadmin/ui": ["libs/petcareadmin/ui/src/index.ts"],
+      "@petcareorg/petcareadmin/feature-animals": [
+        "libs/petcareadmin/feature-animals/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
