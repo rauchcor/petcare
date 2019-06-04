@@ -9,4 +9,8 @@ export class AnimalService {
     return Animals;
   }
 
+  getAllAnimalsByAnimalType(animalTypeId: string) : Animal[]{
+   return Animals.filter(x => x.animalTypeId === animalTypeId);
+  }
+
 }

@@ -4,7 +4,7 @@
       class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
       *ngFor="let animalType of animalTypes"
     >
-      <div class="animal-type-box">
+      <div class="animal-type-box" tabindex="0" (click)="open(animalType.id)">
         <div class="row animal-type-picture-box">
             <img src="assets/{{ animalType.pictureUrl }}" alt="{{animalType.name}}" class="animal-type-image" />
         </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { AnimalType } from '@petcareorg/petcareadmin/data';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'petcareorg-animals-overview',
@@ -10,7 +11,7 @@ import { AnimalType } from '@petcareorg/petcareadmin/data';
 export class AnimalsOverviewComponent implements OnInit {
   animalTypes: AnimalType[];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
     this.http.get<AnimalType[]>('/api/animal-type').subscribe(
@@ -19,6 +20,10 @@ export class AnimalsOverviewComponent implements OnInit {
       },
       error => console.log(error)
     );
+  }
+
+  open(id: string) {
+    this.router.navigate(["main/animals", id]);
   }
 
 }

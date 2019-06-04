@@ -7,7 +7,7 @@ export const AnimalTypes: AnimalType[] = [
     pictureUrl: 'lions.jpg'
    },
    {
-    id:'1',
+    id:'2',
     name: 'Penguins',
     pictureUrl: 'penguins.jpg'
    }
