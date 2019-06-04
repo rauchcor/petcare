@@ -28,6 +28,9 @@
       "@petcareorg/petcareadmin/ui": ["libs/petcareadmin/ui/src/index.ts"],
       "@petcareorg/petcareadmin/feature-animals": [
         "libs/petcareadmin/feature-animals/src/index.ts"
+      ],
+      "@petcareorg/petcareadmin/shared-data-access": [
+        "libs/petcareadmin/shared-data-access/src/index.ts"
       ]
     }
   },

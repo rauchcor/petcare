@@ -174,62 +174,6 @@
         }
       }
     },
-    "data": {
-      "root": "libs/data",
-      "sourceRoot": "libs\\data\\src",
-      "projectType": "library",
-      "schematics": {},
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs\\data\\tsconfig.lib.json",
-              "libs/data/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/data/jest.config.js",
-            "tsConfig": "libs/data/tsconfig.spec.json"
-          }
-        }
-      }
-    },
-    "ui": {
-      "projectType": "library",
-      "root": "libs/ui",
-      "sourceRoot": "libs/ui/src",
-      "prefix": "petcareorg",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/ui/tsconfig.lib.json",
-              "libs/ui/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/ui/jest.config.js",
-            "tsConfig": "libs/ui/tsconfig.spec.json",
-            "setupFile": "libs/ui/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "petcareadmin-data": {
       "root": "libs/petcareadmin/data",
       "sourceRoot": "libs\\petcareadmin\\data\\src",
@@ -370,6 +314,37 @@
             "jestConfig": "libs/petcareadmin/feature-animals/jest.config.js",
             "tsConfig": "libs/petcareadmin/feature-animals/tsconfig.spec.json",
             "setupFile": "libs/petcareadmin/feature-animals/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "petcareadmin-shared-data-access": {
+      "projectType": "library",
+      "root": "libs/petcareadmin/shared-data-access",
+      "sourceRoot": "libs/petcareadmin/shared-data-access/src",
+      "prefix": "petcareorg",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/petcareadmin/shared-data-access/tsconfig.lib.json",
+              "libs/petcareadmin/shared-data-access/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/petcareadmin/shared-data-access/jest.config.js",
+            "tsConfig": "libs/petcareadmin/shared-data-access/tsconfig.spec.json",
+            "setupFile": "libs/petcareadmin/shared-data-access/src/test-setup.ts"
           }
         }
       },

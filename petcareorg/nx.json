@@ -17,12 +17,6 @@
     "petcareadminapi": {
       "tags": []
     },
-    "data": {
-      "tags": []
-    },
-    "ui": {
-      "tags": []
-    },
     "petcareadmin-data": {
       "tags": []
     },
@@ -36,6 +30,9 @@
       "tags": []
     },
     "petcareadmin-feature-animals": {
+      "tags": []
+    },
+    "petcareadmin-shared-data-access": {
       "tags": []
     }
   }
