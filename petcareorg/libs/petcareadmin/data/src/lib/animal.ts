@@ -4,7 +4,7 @@ export interface Animal {
   id: string;
   name: string;
   animalTypeId: string;
-  taskIds: number[];
-  userIds: number[];
+  taskIds: string[];
+  userIds: string[];
   pictureUrl: string;
 }

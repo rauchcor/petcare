@@ -3,13 +3,14 @@ import { Task } from '@petcareorg/petcareadmin/data';
 
 @Controller('task')
 export class TaskController {
+
   @Post()
   create(@Body() animal: Task) {
     return 'This action adds a new cat';
   }
 
   @Get()
-  findAll(@Query() query: any) {
+  findAllByTaskIds(@Query() query: any) {
     return `This action returns all cats (limit: ${query.limit} items)`;
   }
 

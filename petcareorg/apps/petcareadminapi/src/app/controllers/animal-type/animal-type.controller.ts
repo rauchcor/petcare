@@ -1,8 +1,12 @@
 import { Controller, Body, Param, Put, Delete, Get, Query, Post } from '@nestjs/common';
 import { AnimalType } from '@petcareorg/petcareadmin/data';
+import { AnimalTypeService } from '../../services/animal-type/animal-type.service';
 
 @Controller('animal-type')
 export class AnimalTypeController {
+  constructor(private animalTypeService: AnimalTypeService) {
+
+  }
   @Post()
   create(@Body() animal: AnimalType) {
     return 'This action adds a new cat';
@@ -10,7 +14,7 @@ export class AnimalTypeController {
 
   @Get()
   findAll(@Query() query: any) {
-    return `This action returns all cats (limit: ${query.limit} items)`;
+    return this.animalTypeService.getAll();
   }
 
   @Get(':id')

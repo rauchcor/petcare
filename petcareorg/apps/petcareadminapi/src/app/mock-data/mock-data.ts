@@ -3,11 +3,13 @@ import { Animal, User, TaskType, Task, AnimalType } from '@petcareorg/petcareadm
 export const AnimalTypes: AnimalType[] = [
   {
     id:'1',
-    name: 'Lions'
+    name: 'Lions',
+    pictureUrl: 'lions.jpg'
    },
    {
     id:'1',
-    name: 'Penguins'
+    name: 'Penguins',
+    pictureUrl: 'penguins.jpg'
    }
 ];
 
@@ -117,80 +119,80 @@ export const Animals: Animal[] = [
     id:'1',
     name: 'Simba',
     animalTypeId: '1',
-    taskIds: [1, 2, 3],
-    userIds: [2, 3],
+    taskIds: ['1', '2', '3'],
+    userIds: ['2', '3'],
     pictureUrl:'simba.jpg'
    },
    {
     id:'2',
     name: 'Scar',
     animalTypeId: '1',
-    taskIds: [1, 2, 3],
-    userIds: [2, 3],
+    taskIds: ['1', '2', '3'],
+    userIds: ['2', '3'],
     pictureUrl:'scar.jpg'
    },
    {
     id:'3',
     name: 'Nala',
     animalTypeId: '1',
-    taskIds: [1, 2, 3],
-    userIds: [2, 3],
+    taskIds: ['1', '2', '3'],
+    userIds: ['2', '3'],
     pictureUrl:'nala.jpg'
    },
    {
     id:'4',
     name: 'Mufasa',
     animalTypeId: '1',
-    taskIds: [1, 2, 3],
-    userIds: [2, 3],
+    taskIds: ['1', '2', '3'],
+    userIds: ['2', '3'],
     pictureUrl:'mufasa.jpg'
    },
    {
     id:'5',
     name: 'Skipper',
     animalTypeId: '2',
-    taskIds: [4, 5, 6],
-    userIds: [3, 4],
+    taskIds: ['4', '5', '6'],
+    userIds: ['3', '4'],
     pictureUrl:'skipper.jpg'
    },
    {
     id:'6',
     name: 'Kowalski',
     animalTypeId: '2',
-    taskIds: [4, 5, 6],
-    userIds: [3, 4],
+    taskIds: ['4', '5', '6'],
+    userIds: ['3', '4'],
     pictureUrl:'kowalski.jpg'
    },
    {
     id:'7',
     name: 'Private',
     animalTypeId: '2',
-    taskIds: [4, 5, 6],
-    userIds: [3, 4],
+    taskIds: ['4', '5', '6'],
+    userIds: ['3', '4'],
     pictureUrl:'private.jpg'
    },
    {
     id:'8',
     name: 'Tick',
     animalTypeId: '2',
-    taskIds: [4, 5, 6],
-    userIds: [3, 4],
+    taskIds: ['4', '5', '6'],
+    userIds: ['3', '4'],
     pictureUrl:'tick.jpg'
    },
    {
     id:'9',
     name: 'Trick',
     animalTypeId: '2',
-    taskIds: [4, 5, 6],
-    userIds: [3, 4],
+    taskIds: ['4', '5', '6'],
+    userIds: ['3', '4'],
     pictureUrl:'trick.jpg'
    },
    {
     id:'10',
     name: 'Track',
     animalTypeId: '2',
-    taskIds: [4, 5, 6],
-    userIds: [3, 4],
+    taskIds: ['4', '5', '6'],
+    userIds: ['3', '4'],
     pictureUrl:'track.jpg'
    },
 ];
