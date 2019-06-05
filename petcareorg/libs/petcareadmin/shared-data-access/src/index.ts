@@ -1,1 +1,1 @@
-export * from './lib/petcareadmin-unit-of-work.service';
+export * from './lib/unit-of-work/petcareadmin-unit-of-work.service';

@@ -1,32 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { User } from '@petcareorg/petcareadmin/data';
-import { PetcareadminUnitOfWorkService } from '@petcareorg/petcareadmin/shared-data-access';
+import { AuthService } from '@petcareorg/petcareadmin/utils-login';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'petcareorg-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
+
   user: User;
-  email:string;
+  email: string;
   password: string;
-  constructor(private router: Router, private unitOfWork: PetcareadminUnitOfWorkService) {}
+  isAuthenticated$: any;
+  sub: Subscription;
+  loginclick= false;
+  constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit() {}
 
   login() {
-    this.unitOfWork
-        .user
-        .get()
-        .subscribe(
-          t => {
-            console.log(t);
-            this.user = t;
-            this.router.navigate(['/main']);
-          },
-          error => console.log(error)
-        );;
+    this.loginclick = true;
+    this.authService.login(this.email, this.password);
+    this.isAuthenticated$ = this.authService.isAuthenticated$;
+    this.sub = this.isAuthenticated$.subscribe(t => {
+     if (t) {
+      this.router.navigate(['/main']);
+     }
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
   }
 }

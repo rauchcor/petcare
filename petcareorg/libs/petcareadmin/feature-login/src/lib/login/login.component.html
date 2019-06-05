@@ -10,7 +10,7 @@
       [(ngModel)]="email"
       autocomplete="email"
       aria-describedby="e-mail address"
-      [ngModelOptions]="{standalone: true}"
+      [ngModelOptions]="{ standalone: true }"
       required=""
       autofocus=""
     />
@@ -24,10 +24,13 @@
       aria-describedby="password"
       autocomplete="current-password"
       required=""
-      [ngModelOptions]="{standalone: true}"
+      [ngModelOptions]="{ standalone: true }"
     />
     <button class="btn btn-lg btn-primary btn-block" type="submit">
       Sign in
     </button>
+    <p *ngIf="!(isAuthenticated$ | async) && loginclick" class="text-muted">
+      Password or username was wrong.
+    </p>
   </form>
 </div>

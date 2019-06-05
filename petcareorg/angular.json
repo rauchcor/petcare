@@ -353,6 +353,37 @@
           "styleext": "scss"
         }
       }
+    },
+    "petcareadmin-utils-login": {
+      "projectType": "library",
+      "root": "libs/petcareadmin/utils-login",
+      "sourceRoot": "libs/petcareadmin/utils-login/src",
+      "prefix": "petcareorg",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/petcareadmin/utils-login/tsconfig.lib.json",
+              "libs/petcareadmin/utils-login/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/petcareadmin/utils-login/jest.config.js",
+            "tsConfig": "libs/petcareadmin/utils-login/tsconfig.spec.json",
+            "setupFile": "libs/petcareadmin/utils-login/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

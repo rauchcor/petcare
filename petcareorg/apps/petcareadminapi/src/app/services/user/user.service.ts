@@ -5,7 +5,7 @@ import { User } from '@petcareorg/petcareadmin/data';
 @Injectable()
 export class UserService {
 
-  getUser(email: string) : User{
-   return UserList.find(x => x.email === email)
+  getUser(email: string, password: string) : User{
+   return UserList.find(x => x.email === email && x.password === password)
   }
 }
